@@ -20,10 +20,10 @@
   ================================================== -->
 
         <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="assets/css/base.css">
-        <link rel="stylesheet" href="assets/css/skeleton.css">
-        <link rel="stylesheet" href="assets/css/layout.css">
-        <link rel="stylesheet" href="assets/css/site.css">
+        <link rel="stylesheet" href="/assets/css/base.css">
+        <link rel="stylesheet" href="/assets/css/skeleton.css">
+        <link rel="stylesheet" href="/assets/css/layout.css">
+        <link rel="stylesheet" href="/assets/css/site.css">
 
         <!--[if lt IE 9]>
                 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -31,10 +31,10 @@
 
         <!-- Favicons
         ================================================== -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
-        <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.png">
+        <link rel="shortcut icon" href="/assets/images/favicon.ico">
+        <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/assets/images/apple-touch-icon-114x114.png">
 
 </head>
 <body lang="en">
@@ -43,7 +43,11 @@
     <header id="masthead" class="sixteen columns">
       <h1 class="remove-bottom" style="margin-top: 40px">
         <a href="/">cnu</a>
-        <span class="pagetype">/ projects <%= @item[:pagetype] %></span>
+        <span class="pagetype">
+          <% if @item[:pagetype] %>
+          <%= '/ ' + @item[:pagetype] %>
+          <% end %>
+        </span>
       </h1>
     </header>  
     <section class="thirteen columns">
@@ -52,9 +56,9 @@
 
     <nav id="right" class="three columns">
       <ul>
-        <li><a href="blog">blog</a></li>
-        <li><a href="projects">projects</a></li>
-        <li><a href="about">about</a></li>
+        <li><a href="/blog/">blog</a></li>
+        <li><a href="/projects/">projects</a></li>
+        <li><a href="/about/">about</a></li>
       </ul>
     </nav>
       
