@@ -17,6 +17,15 @@ compile '/stylesheet/' do
   # don’t filter or layout
 end
 
+compile '/blog/' do
+  filter :erb
+  layout 'default'
+end
+
+route '/blog/' do
+  "/blog/index.html"
+end
+
 compile '/blog/*' do
   filter :kramdown
   layout 'blogpost'
