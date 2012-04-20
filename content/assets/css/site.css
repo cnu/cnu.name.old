@@ -38,9 +38,24 @@ header#masthead span.page-title {
 h1 a {
 	text-decoration: none;
 }
+h1 a:hover {
+  color: #ec5519;
+}
+
+nav {
+  width: 10em;
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 4em;
+  font-family: "PT Sans", "Helvetica Neue", HelveticaNeue, Arial, Helvetica, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
 nav ul li {
   list-style: none;
   border-bottom: 1px solid #eeeeee;
+  padding:10px;
+  margin:0;
 }
 
 nav ul li:last-child { 
@@ -51,6 +66,7 @@ nav a {
   border: none;
   font-style: normal;
   color: #111111;
+  text-decoration:none;
 }
 
 nav a:hover {
