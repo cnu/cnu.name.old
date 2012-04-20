@@ -13,17 +13,13 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
-compile '/stylesheet/' do
-  # don’t filter or layout
+compile '/assets/css/*' do
+  filter :less
 end
 
 compile '/blog/' do
   filter :erb
   layout 'default'
-end
-
-route '/blog/' do
-  "/blog/index.html"
 end
 
 compile '/blog/*' do
@@ -40,8 +36,12 @@ compile '*' do
   end
 end
 
-route '/stylesheet/' do
-  '/style.css'
+route '/assets/css/*' do
+  item.identifier.chop + '.css'
+end
+
+route '/blog/' do
+  "/blog/index.html"
 end
 
 route '/blog/*' do

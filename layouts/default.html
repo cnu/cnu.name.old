@@ -1,27 +1,67 @@
-<!DOCTYPE HTML>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>My blog - <%= @item[:title] %></title>
-    <link rel="stylesheet" type="text/css" 
-      href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" 
-      media="screen">
-    <link rel="stylesheet" type="text/css" href="/style.css">
-  </head>
-  <body> 
-    <div class='navbar navbar-fixed-top'>
-      <div class='navbar-inner'>
-        <div class='container'>
-          <a class='brand' href='/'>My Blog</a>
-          <ul class='nav'>
-            <li class='active'><a href='/'>Home</a></li>
-            <li><a href='/about'>About</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <section class='content'>
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+        <!-- Basic Page Needs
+  ================================================== -->
+        <meta charset="utf-8">
+        <title>cnu <%= '/ ' + @item[:title] %></title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Mobile Specific Metas
+  ================================================== -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!-- CSS
+  ================================================== -->
+
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="assets/css/base.css">
+        <link rel="stylesheet" href="assets/css/skeleton.css">
+        <link rel="stylesheet" href="assets/css/layout.css">
+        <link rel="stylesheet" href="assets/css/site.css">
+
+        <!--[if lt IE 9]>
+                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!-- Favicons
+        ================================================== -->
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+</head>
+<body lang="en">
+
+  <section class='container'>
+    <header id="masthead" class="sixteen columns">
+      <h1 class="remove-bottom" style="margin-top: 40px">
+        <a href="/">cnu</a>
+        <span class="pagetype">/ projects <%= @item[:pagetype] %></span>
+      </h1>
+    </header>  
+    <section class="thirteen columns">
       <%= yield %>
     </section>
-  </body>
+
+    <nav id="right" class="three columns">
+      <ul>
+        <li><a href="blog">blog</a></li>
+        <li><a href="projects">projects</a></li>
+        <li><a href="about">about</a></li>
+      </ul>
+    </nav>
+      
+
+  </section>
+
+
+</body>
+
 </html>
