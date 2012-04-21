@@ -1,5 +1,5 @@
 - render 'default' do 
   .post
-    %h1= item[:title]
+    %h2= item[:title]
     %aside= "Posted at:  #{get_pretty_date(item)}"
     %article= yield

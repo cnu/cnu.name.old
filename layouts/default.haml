@@ -35,9 +35,9 @@
         %a{:href => "/"} cnu
         - if @item[:pagetype] 
           %span{:class => "pagetype"}= '/ ' + @item[:pagetype]
-    %section{:class => "thirteen columns"}= yield
+    %section{:class => "twelve columns"}= yield
 
-    %nav{:id => "right", :class => "three columns"}
+    %nav{:id => "right", :class => "three columns offset-by-one"}
       %ul
         %li
           %a{:href => "/blog/"}blog

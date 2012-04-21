@@ -1,8 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Tulpen+One);
 
 /* Color variables */
+@6grey: #666;
+@9grey: #999;
 @orange: #ec5519;
-@grey: #666;
 @lightblack: #111;
 @lightgrey: #eee;
 
@@ -27,14 +28,9 @@ header#masthead {
       font-family: "PT Sans", "Helvetica Neue", HelveticaNeue, Arial, Helvetica, sans-serif;
     }
     span.pagetype {
-      color: @grey;
+      color: @9grey;
       text-transform: lowercase;
     }
-    span.page-title {
-      color: @grey;
-      text-transform: lowercase;
-    }
-
 }
 
 h1 a {
@@ -68,7 +64,43 @@ nav {
     text-decoration:none;
     &:hover {
       color: @orange;
-      text-decoration: none;
+    }
+  }
+}
+
+
+.post {
+  margin-bottom: 10px;
+  margin-top:5px;
+  padding-bottom: 5px;
+  border-bottom: 1px @lightgrey solid;
+  h2 {
+    font-size:1.8em;
+    margin-bottom:0;
+    a {
+      color: black;
+      text-decoration:none;
+      &:hover {
+        color: @orange;
+      }
+    }
+  }
+  aside {
+    font-size:0.8em;
+    color: grey;
+  }
+  article {
+    p {
+      margin-bottom: 5px;
+    }
+    .read-more {
+      text-align:right;
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }
