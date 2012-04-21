@@ -18,7 +18,7 @@ compile '/assets/css/*' do
 end
 
 compile '/blog/' do
-  filter :erb
+  filter :haml
   layout 'default'
 end
 
@@ -31,13 +31,16 @@ compile '*' do
   if item.binary?
     # don’t filter binary items
   else
+    puts "extension #{item[:extension]}"
     case item[:extension]
-    when '.html'
+    when 'html'
       filter :erb
-    when '.md'
+    when 'md'
       filter :kramdown
-    when '.haml'
+    when 'haml'
       filter :haml
+    else
+      filter :erb
     end
     layout 'default'
   end
@@ -68,4 +71,4 @@ route '*' do
   end
 end
 
-layout '*', :erb
+layout '*', :haml
