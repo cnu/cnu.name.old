@@ -10,6 +10,8 @@
 body {
   font-family: "Helvetica Neue", HelveticaNeue, Arial, Helvetica, sans-serif;
   color: #111111;
+  font-size:1em;
+  line-height:1.5;
 }
 
 header#masthead {
@@ -40,6 +42,16 @@ h1 a {
     }
 }
 
+.ul-li-menu(@color) {
+    list-style: none;
+    border-bottom: 1px solid @color;
+    padding:10px;
+    margin:0;
+    &:last-child { 
+      border-bottom: none; 
+    }
+}
+
 nav {
   width: 10em;
   font-size: 2em;
@@ -49,14 +61,9 @@ nav {
   -webkit-text-size-adjust: 100%;
 
   ul li {
-    list-style: none;
-    border-bottom: 1px solid @lightgrey;
-    padding:10px;
-    margin:0;
-    &:last-child { 
-      border-bottom: none; 
-    }
+    .ul-li-menu(@lightgrey);
   }
+
   a {
     border: none;
     font-style: normal;
@@ -75,10 +82,9 @@ nav {
   line-height: 4em;
   color: @9grey;
   font-family: "PT Sans", "Helvetica Neue", HelveticaNeue, Arial, Helvetica, sans-serif;
+
   ul li {
-    list-style:none;
-    padding: 10px;
-    margin: 0;
+    .ul-li-menu(white);
   }
 }
 /* Hide the splash screen if device is a phone */
@@ -95,7 +101,10 @@ nav {
   border-bottom: 1px @lightgrey solid;
   h2 {
     font-size:1.8em;
+    font-family: "PT Sans", "Helvetica Neue", HelveticaNeue, Arial, Helvetica, sans-serif;
     margin-bottom:0;
+    font-weight:bold;
+    color: @lightblack;
     a {
       color: black;
       text-decoration:none;
@@ -110,7 +119,8 @@ nav {
   }
   article {
     p {
-      margin-bottom: 5px;
+      margin-bottom:1.5em;
+      margin-top: 1.5em;
     }
     .read-more {
       text-align:right;
