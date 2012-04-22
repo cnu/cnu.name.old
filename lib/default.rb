@@ -11,7 +11,7 @@ module PostHelper
     attribute_to_time(post[:created_at]).strftime('%B %-d, %Y')
   end
 
-  def get_post_start(post)
+  def get_excerpt(post)
     content = post.compiled_content
     if content =~ /\s<!-- more -->\s/
       content = content.partition('<!-- more -->').first +

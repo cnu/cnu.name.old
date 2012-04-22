@@ -8,4 +8,4 @@ pagetype: blog
     %h2= link_to post[:title], post.path
     %aside= "Posted at:  #{get_pretty_date(post)}"
     %article
-      = get_post_start(post)
+      = get_excerpt(post)
