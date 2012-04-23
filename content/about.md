@@ -8,3 +8,10 @@ I am **cnu** (aka) **Srinivasan Rangarajan** in the real world. I am a software 
 I primarily work using [python](http://python.org/), though I have tried to learn some [new](http://www.ruby-lang.org/) [languages](http://www.lisp.org/) in the past. I also like to write (a lot) and had started a Social Blog network called [Blogial](http://blogial.com).
 
 This site is created using [nanoc](http://nanoc.stoneship.org/) which is a nice little tool to build static websites. No databases, no dynamic parts in the page - just simple HTML files generated out of documents written in [Markdown](http://daringfireball.net/projects/markdown/).
+
+## Contact
+
+* Email <span class="email-rtl">eman.<span class="hide">NOSPAM</span>unc@<span class="hide">PLS</span>em</span>
+* Follow me on twitter [@cnu](http://twitter.com/cnu)
+* Subscribe to me on Facebook at [cnus8n](http://www.facebook.com/cnus8n).
+* Linkedin profile at [cnus8n](http://in.linkedin.com/in/cnus8n).
