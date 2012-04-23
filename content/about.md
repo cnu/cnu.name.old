@@ -15,3 +15,17 @@ This site is created using [nanoc](http://nanoc.stoneship.org/) which is a nice 
 * Follow me on twitter [@cnu](http://twitter.com/cnu)
 * Subscribe to me on Facebook at [cnus8n](http://www.facebook.com/cnus8n).
 * Linkedin profile at [cnus8n](http://in.linkedin.com/in/cnus8n).
+
+<div class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'cnu'; // required: replace example with your forum shortname
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
